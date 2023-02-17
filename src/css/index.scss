@@ -22,15 +22,16 @@ html{
 	background-repeat: no-repeat;
 	background-size: cover;
 	.card{
-		width: 27.87rem;
-		height: 15.31rem;		
-		padding: 1.87rem;
+		width: 27.87em;
+		height: 15.31em;		
+		padding: 1.87em;
 		position: absolute;
 		background-size: 100% 100%;
 	}
 	.front-side{		
-		top: 11.68rem;
-		left: 33.74%;		
+		top: 20%;
+		right: 0;
+		transform: translate(30%, 0%);		
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -42,7 +43,7 @@ html{
 			row-gap: 10px;
 			color: hsl(0, 0%, 100%);
 			.number{
-				font-size: 1.87rem;
+				font-size: 1.87em;
 				font-weight: 500;
 				letter-spacing: 0.125rem;
 				width: 100%;
@@ -59,12 +60,14 @@ html{
 	}
 	.back-side{
 		background-image: url('../img/bg-card-back.png');	
-		top: 29.25rem;
-		left: 53.31%;
+		top: 52%;
+		right: 0;
+		transform: translate(50%,0%);
 		&__cvc{
+			color:hsl(0, 0%, 100%);
 			position: absolute;
-			top: 7rem;
-			right: 3.81rem;
+			top: 44%;
+			right: 13%;
 		}
 	}	
 }
@@ -76,7 +79,7 @@ html{
 	justify-content: center;	
 }
 .form{
-	max-width: 24rem;
+	max-width: 24em;
 	position: relative;
 	top: 0;
 	left: 12%;
@@ -84,6 +87,7 @@ html{
 .input-form{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	column-gap: 1.25rem;
 	color: hsl(278, 68%, 11%);
 	.error{
@@ -95,10 +99,10 @@ html{
 	row-gap: 1.87rem;
 	label{
 		width: 100%;
-		font-size: 0.75rem;
-		letter-spacing: 0.125rem;
+		font-size: 0.75em;
+		letter-spacing: 0.125em;
 		text-transform: uppercase;
-		margin-bottom: 0.75rem;
+		margin-bottom: 0.75em;
 		display: block;
 	}
 	input{
@@ -107,19 +111,19 @@ html{
 		padding: 0.87rem 1rem;
 		margin-bottom: 10px;
 		border-radius: 10px;	
-		border: 1px solid hsl(270, 3%, 87%)					
-	}	
+		border: 1px solid hsl(270, 3%, 87%)
+	}
 	&__date{
 		display: flex;
 		flex-wrap: wrap;
 		column-gap: 10px;
-		width: 47%;
+		width: 45%;
 		input{
-			width: 47%;
+			width: 45%;
 		}
 	}
 	&__cvc{
-		width: 47%;
+		width: 45%;
 	}
 	
 }
@@ -142,7 +146,7 @@ html{
 }
 
 .confirm{
-	width: 24rem;
+	width: 24em;
 	position: relative;
 	top: 0;
 	left: 12%;
@@ -168,4 +172,42 @@ html{
 		font-size: 1.2rem;
 		letter-spacing: 2px;
 	}
+}
+
+@media(max-width: 60em){
+.wrapper{
+	flex-direction: column;
+	}
+.info{
+	width: 100%;
+	min-height: 15rem;
+	background-image: url('../img/bg-main-mobile.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 0.7em;
+	.front-side{	
+		transform: translate(0%, 0%);	
+		top: 59%;
+		left: 4.26%;	
+		z-index: 2;	
+	}
+	.back-side{
+		top: 15%;
+		right: 6.26%;
+		transform: translate(0%, 0%);
+	}
+}
+.action{
+	font-size: 0.7em;
+	width: 100%;
+	padding-top: 13.65rem;
+	.form{
+		left: 0;}
+
+}
+.confirm{
+	top: 0;
+	left: 0;
+}
+
 }

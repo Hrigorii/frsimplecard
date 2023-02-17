@@ -24,15 +24,16 @@ html {
   background-size: cover;
 }
 .info .card {
-  width: 27.87rem;
-  height: 15.31rem;
-  padding: 1.87rem;
+  width: 27.87em;
+  height: 15.31em;
+  padding: 1.87em;
   position: absolute;
   background-size: 100% 100%;
 }
 .info .front-side {
-  top: 11.68rem;
-  left: 33.74%;
+  top: 20%;
+  right: 0;
+  transform: translate(30%, 0%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -46,7 +47,7 @@ html {
   color: hsl(0deg, 0%, 100%);
 }
 .info .front-side__info .number {
-  font-size: 1.87rem;
+  font-size: 1.87em;
   font-weight: 500;
   letter-spacing: 0.125rem;
   width: 100%;
@@ -61,13 +62,15 @@ html {
 }
 .info .back-side {
   background-image: url("../img/bg-card-back.png");
-  top: 29.25rem;
-  left: 53.31%;
+  top: 52%;
+  right: 0;
+  transform: translate(50%, 0%);
 }
 .info .back-side__cvc {
+  color: hsl(0deg, 0%, 100%);
   position: absolute;
-  top: 7rem;
-  right: 3.81rem;
+  top: 44%;
+  right: 13%;
 }
 
 .action {
@@ -78,7 +81,7 @@ html {
 }
 
 .form {
-  max-width: 24rem;
+  max-width: 24em;
   position: relative;
   top: 0;
   left: 12%;
@@ -87,6 +90,7 @@ html {
 .input-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
   color: hsl(278deg, 68%, 11%);
@@ -100,10 +104,10 @@ html {
 }
 .input-form label {
   width: 100%;
-  font-size: 0.75rem;
-  letter-spacing: 0.125rem;
+  font-size: 0.75em;
+  letter-spacing: 0.125em;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.75em;
   display: block;
 }
 .input-form input {
@@ -119,13 +123,13 @@ html {
   flex-wrap: wrap;
   -moz-column-gap: 10px;
        column-gap: 10px;
-  width: 47%;
+  width: 45%;
 }
 .input-form__date input {
-  width: 47%;
+  width: 45%;
 }
 .input-form__cvc {
-  width: 47%;
+  width: 45%;
 }
 
 .button {
@@ -148,7 +152,7 @@ html {
 }
 
 .confirm {
-  width: 24rem;
+  width: 24em;
   position: relative;
   top: 0;
   left: 12%;
@@ -174,4 +178,41 @@ html {
 .confirm .button {
   font-size: 1.2rem;
   letter-spacing: 2px;
+}
+
+@media (max-width: 60em) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .info {
+    width: 100%;
+    min-height: 15rem;
+    background-image: url("../img/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 0.7em;
+  }
+  .info .front-side {
+    transform: translate(0%, 0%);
+    top: 59%;
+    left: 4.26%;
+    z-index: 2;
+  }
+  .info .back-side {
+    top: 15%;
+    right: 6.26%;
+    transform: translate(0%, 0%);
+  }
+  .action {
+    font-size: 0.7em;
+    width: 100%;
+    padding-top: 13.65rem;
+  }
+  .action .form {
+    left: 0;
+  }
+  .confirm {
+    top: 0;
+    left: 0;
+  }
 }

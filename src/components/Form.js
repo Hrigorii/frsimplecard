@@ -48,7 +48,7 @@ export function Form({ name, month, year, cvc, setName, setValid, valid, number,
 
 	function inputDate(event, set) {
 		let number = event.target.value.replace(/[^\d]/, '').match(/^.{0,2}/g);
-		set(number)
+		set(number);
 		if (number.toString().length === 2) {
 			setErrorDate(false);
 		} else {
